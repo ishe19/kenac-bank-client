@@ -1,66 +1,51 @@
-# Kenac Bank Client
+🚀 Kenac Bank Client
 
-This is the frontend for the Kenac Bank application, built with Next.js, TypeScript, and Tailwind CSS.
+This is the frontend for the Kenac Bank application, built using Next.js, TypeScript, and Tailwind CSS.
+✅ Prerequisites
 
-## Prerequisites
+Make sure you have the following installed:
 
-- [Node.js](https://nodejs.org/) (v16 or higher recommended)
-- [pnpm](https://pnpm.io/) (or use npm/yarn if you prefer)
+    Node.js — v16 or higher recommended
 
-## Getting Started
+    pnpm — or use npm / yarn if preferred
 
-1. **Clone the repository:**
+🛠 Getting Started
 
-   ```sh
-   git clone https://github.com/your-username/kenac_bank_frontend.git
-   cd kenac_bank_frontend/kenac-bank-client
-   ```
+Follow these steps to run the project locally:
+1. Clone the Repository
 
-2. **Install dependencies:**
+git clone https://github.com/ishe19/kenac_bank_frontend.git
+cd kenac_bank_frontend/kenac-bank-client
 
-   ```sh
-   pnpm install
-   # or
-   npm install
-   # or
-   yarn install
-   ```
+2. Install Dependencies
 
-3. **Run the development server:**
+Choose your preferred package manager:
 
-   ```sh
-   pnpm dev
-   # or
-   npm run dev
-   # or
-   yarn dev
-   ```
+pnpm install
+# or
+npm install
+# or
+yarn install
 
-4. **Open your browser and visit:**
+3. Run the Development Server
 
-   ```
-   http://localhost:3000
-   ```
+pnpm dev
+# or
+npm run dev
+# or
+yarn dev
 
-## Project Structure
+4. Visit in Browser
 
-- `app/` - Next.js app directory (pages, API routes, etc.)
-- `components/` - Reusable React components
-- `hooks/` - Custom React hooks
-- `lib/` - Utility libraries
-- `public/` - Static assets
-- `styles/` - Global styles
+http://localhost:3000
 
-## Environment Variables
+🧱 Project Structure
 
-If you need to set up environment variables, create a `.env.local` file in the root directory.
+kenac-bank-client/
+├── app/         # Next.js app directory (routes, pages, etc.)
+├── components/  # Reusable React components
+├── hooks/       # Custom React hooks
+├── lib/         # Utility functions and helpers
+├── public/      # Static assets
+├── styles/      # Global styles (Tailwind config, etc.)
 
-## Scripts
-
-- `pnpm dev` - Start the development server
-- `pnpm build` - Build for production
-- `pnpm start` - Start the production server
-
-## License
-
-MIT
