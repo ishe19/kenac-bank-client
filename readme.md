@@ -1,4 +1,4 @@
-🚀 Kenac Bank Client
+# 🚀 Kenac Bank Client
 
 This is the frontend for the Kenac Bank application, built using Next.js, TypeScript, and Tailwind CSS.
 ✅ Prerequisites
@@ -21,18 +21,14 @@ cd kenac_bank_frontend/kenac-bank-client
 
 Choose your preferred package manager:
 
-pnpm install
-# or
 npm install
-# or
+### or
 yarn install
 
 3. Run the Development Server
 
-pnpm dev
-# or
 npm run dev
-# or
+### or
 yarn dev
 
 4. Visit in Browser
