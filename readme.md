@@ -1,13 +1,18 @@
 # 🚀 Kenac Bank Client
 
 This is the frontend for the Kenac Bank application, built using Next.js, TypeScript, and Tailwind CSS.
+
+> **Note:**  
+> This application does **not** connect to a real backend.  
+> All API requests are simulated using dummy API routes within the project for demonstration and local development purposes.
+
 ✅ Prerequisites
 
 Make sure you have the following installed:
 
     Node.js — v16 or higher recommended
 
-    pnpm — or use npm / yarn if preferred
+    pnpm — or use npm(recommended) / yarn if preferred
 
 🛠 Getting Started
 
