@@ -4,8 +4,8 @@ import { type NextRequest, NextResponse } from "next/server"
 let userProfile = {
   name: "Demo User",
   email: "demo@kenacbank.com",
-  phone: "+1 (555) 123-4567",
-  address: "123 Main Street, Anytown, AT 12345",
+  phone: "+263 77 123 4567",
+  address: "123 Enterprise St, Harare, Zimbabwe",
 }
 
 export async function GET() {
