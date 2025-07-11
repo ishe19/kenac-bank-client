@@ -38,27 +38,6 @@ export function QuickActions({ onDeposit, onWithdraw }: QuickActionsProps) {
       color: "bg-blue-50 text-blue-600 hover:bg-blue-100",
       onClick: () => alert("Transfer feature coming soon!"),
     },
-    {
-      name: "Pay Bills",
-      description: "Pay your bills quickly",
-      icon: CreditCardIcon,
-      color: "bg-purple-50 text-purple-600 hover:bg-purple-100",
-      onClick: () => alert("Bill pay feature coming soon!"),
-    },
-    {
-      name: "Send Money",
-      description: "Send money to friends",
-      icon: BanknotesIcon,
-      color: "bg-yellow-50 text-yellow-600 hover:bg-yellow-100",
-      onClick: () => alert("Send money feature coming soon!"),
-    },
-    {
-      name: "Invest",
-      description: "Grow your wealth",
-      icon: ChartBarIcon,
-      color: "bg-indigo-50 text-indigo-600 hover:bg-indigo-100",
-      onClick: () => alert("Investment feature coming soon!"),
-    },
   ]
 
   return (
