@@ -44,7 +44,6 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
   const navigation = [
     { name: "Dashboard", href: "/dashboard", icon: HomeIcon, description: "Account overview" },
     { name: "Transactions", href: "/dashboard/transactions", icon: CreditCardIcon, description: "Transaction history" },
-    { name: "Analytics", href: "/dashboard/analytics", icon: ChartBarIcon, description: "Financial insights" },
     { name: "Profile", href: "/dashboard/profile", icon: UserIcon, description: "Account settings" },
     { name: "Settings", href: "/dashboard/settings", icon: CogIcon, description: "App preferences" },
   ]

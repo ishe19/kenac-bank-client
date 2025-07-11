@@ -121,36 +121,70 @@ export default function DashboardPage() {
             </motion.div>
 
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.4 }}
-              className="card"
-            >
-              <div className="flex items-center justify-between mb-4">
-                <h3 className="text-lg font-semibold text-gray-900">
-                  Recent Transactions
-                </h3>
-                <a
-                  href="/dashboard/transactions"
-                  className="text-blue-600 hover:text-blue-700 text-sm font-medium"
-                >
-                  View All
-                </a>
-              </div>
-              <div className="space-y-3">
-                {recentTransactions.map((tx, i) => (
-                  <motion.div
-                    key={tx.id}
-                    initial={{ opacity: 0, x: -20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ delay: 0.5 + i * 0.1 }}
-                    className="flex items-center justify-between p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors"
-                  >
-                    {/* ... transaction row */}
-                  </motion.div>
-                ))}
-              </div>
-            </motion.div>
+  initial={{ opacity: 0, y: 20 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ delay: 0.4 }}
+  className="card"
+>
+  <div className="flex items-center justify-between mb-4">
+    <h3 className="text-lg font-semibold text-gray-900">
+      Recent Transactions
+    </h3>
+    <a
+      href="/dashboard/transactions"
+      className="text-blue-600 hover:text-blue-700 text-sm font-medium"
+    >
+      View All
+    </a>
+  </div>
+  <div className="space-y-3">
+    {recentTransactions.length > 0 ? (
+      recentTransactions.map((tx, i) => (
+        <motion.div
+          key={tx.id}
+          initial={{ opacity: 0, x: -20 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ delay: 0.5 + i * 0.1 }}
+          className="flex items-center justify-between p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors"
+        >
+          <div className="flex items-center space-x-3">
+            <div className={`w-10 h-10 rounded-full flex items-center justify-center ${
+              tx.type === 'deposit' 
+                ? 'bg-green-100 text-green-600' 
+                : 'bg-red-100 text-red-600'
+            }`}>
+              {tx.type === 'deposit' ? '↓' : '↑'}
+            </div>
+            <div>
+              <p className="font-medium text-gray-900">{tx.description}</p>
+              <p className="text-sm text-gray-500">
+                {new Date(tx.date).toLocaleDateString()}
+              </p>
+            </div>
+          </div>
+          <div className="text-right">
+            <p className={`font-semibold ${
+              tx.type === 'deposit' ? 'text-green-600' : 'text-red-600'
+            }`}>
+              {tx.type === 'deposit' ? '+' : '-'}${tx.amount.toLocaleString()} {tx.currency}
+            </p>
+            <p className={`text-xs ${
+              tx.status === 'completed' ? 'text-green-600' : 
+              tx.status === 'pending' ? 'text-yellow-600' : 'text-red-600'
+            }`}>
+              {tx.status}
+            </p>
+          </div>
+        </motion.div>
+      ))
+    ) : (
+      <div className="text-center py-8 text-gray-500">
+        <p>No recent transactions</p>
+        <p className="text-sm">Your transaction history will appear here</p>
+      </div>
+    )}
+  </div>
+</motion.div>
           </div>
 
           <div className="space-y-6">
